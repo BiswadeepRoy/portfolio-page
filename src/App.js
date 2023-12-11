@@ -39,7 +39,7 @@ function App() {
           <div className="intro-para">
             I'm a software developer who loves creating (and sometimes
             designing) the best digital web experiences.<br></br> Currently I am
-            working and handling projects as an UI expert for <a>Amdocs</a>.
+            working and handling projects as an UI expert for <a href="https://www.amdocs.com/" target="_blank">Amdocs</a>.
           </div>
         </p>
         <img

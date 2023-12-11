@@ -103,6 +103,12 @@ body {
   font-weight: 800;
 }
 
+.App .about p .intro-para a {
+  color: orange;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .App .experience {
   grid-area: ex;
   color: #fff;
@@ -575,11 +581,11 @@ table, th, td{
     background: url("../public/bgimage.png") no-repeat center;
     background-size: contain;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
-    grid-template-areas: "er";
+    grid-template-rows: 10vh 60vh 7vh 60vh 7vh 80vh 7vh 60vh 2vh 50vh;
+    grid-template-areas: "nv" "ab" "ex" "ed" "cr" "cd" "pr" "pd" "bl" "ct";
   }
 
-  .error{
+  /* .error{
     grid-area: er;
     color: #fff;
     display: flex;
@@ -588,41 +594,203 @@ table, th, td{
     width: 70%;
     margin: 5%;
     font-size: 1.5em;
+  } */
+
+  .App nav {
+    grid-area: nv;
+  }
+  
+  .App nav ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+    right: 10%;
+    list-style: none;
+  }
+  
+  .App nav ul li a{
+    color: #A9A9A9;
+    margin: 0 0 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .App nav ul li a:hover{
+    color: orange;
+    transition: 700ms;
   }
 
-  .App nav{
-    display: none;
+  .App .about {
+    grid-area: ab;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .App .about p {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    width: 50%;
+    justify-content: space-evenly;
+    position: relative;
+    left: 10%;
+  }
+  
+  .App .about img {
+    position: relative;
+    left: 15%;
+  }
+  
+  .App .about p .intro1{
+    font-size: 1em;
+    margin-left: 5%;
+    letter-spacing: -1px;
+  }
+  
+  .App .about p .intro2{
+    font-size: 2em;
+    font-weight: 900;
+    color: orange;
+  }
+  
+  .App .about p .intro3{
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #A9A9A9;
   }
 
-  .App .about{
-    display: none;
+  .App .experience {
+    grid-area: ex;
+    color: #fff;
+  }
+  
+  .App .experience-data {
+    grid-area: ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%
   }
 
-  .App .experience{
-    display: none;
+  .App .certificates {
+    grid-area: cr;
+    color: #fff;
+  }
+  
+  .App .certificates-data {
+    grid-area: cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%
   }
 
-  .App .experience-data{
-    display: none;
+  .App .project {
+    grid-area: pr;
+    color: #fff;
+  }
+  
+  .App .project-data {
+    grid-area: pd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%
+  }
+  
+  .App .blank{
+    grid-area: bl;
+  }
+  
+  .App footer {
+    grid-area: ct;
+    background-color: rgba(125, 125, 125, 0.5);
+    border-radius: 25px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .App .certificates{
-    display: none;
+  .App footer .contact-header {
+    border-right: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .App footer .contact-info {
+    border-right: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .App .certificates-data{
-    display: none;
+  .App footer .contact-social {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+  }
+  
+  .contact-table-resume {
+    position: relative;
+    left: 35%;
   }
 
-  .App .project{
-    display: none;
+  .Card {
+    min-width: 350px;
+    max-width: 350px;
+    background-color: rgba(200, 200, 200, 0.5);
+    min-height: 220px;
+    margin: 2% 0; 
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .App .project-data{
-    display: none;
+  .CCard {
+    max-width: 250px;
+    min-width: 250px;
+    background-color: rgba(200, 200, 200, 0.5);
+    min-height: 150px;
+    margin: 1% 0;
+    border-radius: 17.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .App footer{
-    display: none;
+  .PCard {
+    max-width: 250px;
+    min-width: 250px;
+    background-color: rgba(200, 200, 200, 0.5);
+    min-height: 150px;
+    margin: 1% 0;
+    border-radius: 17.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
